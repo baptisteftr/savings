@@ -21,6 +21,7 @@ enum MoneyFlowCategory: Int, CaseIterable {
     case bank = 3
     case vacation = 4
     case hobby = 5
+    case work = 6
     
     var displayName: String {
         switch self {
@@ -36,6 +37,8 @@ enum MoneyFlowCategory: Int, CaseIterable {
             return NSLocalizedString("vacation", comment: "")
         case .hobby:
             return NSLocalizedString("hobby", comment: "")
+        case .work:
+            return NSLocalizedString("work", comment: "")
         }
     }
     
@@ -44,7 +47,7 @@ enum MoneyFlowCategory: Int, CaseIterable {
         case .food:
             return Image(systemName: "fork.knife")
         case .dailyLife:
-            return Image(systemName: "fork.knife")
+            return Image(systemName: "bicycle")
         case .house:
             return Image(systemName: "house")
         case .bank:
@@ -53,6 +56,8 @@ enum MoneyFlowCategory: Int, CaseIterable {
             return Image(systemName: "beach.umbrella")
         case .hobby:
             return Image(systemName: "figure.dance")
+        case .work:
+            return Image(systemName: "case")
         }
     }
     
@@ -70,6 +75,8 @@ enum MoneyFlowCategory: Int, CaseIterable {
             return Color.blue
         case .hobby:
             return Color.pink
+        case .work:
+            return Color.cyan
         }
     }
 }
